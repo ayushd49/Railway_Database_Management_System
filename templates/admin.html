@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="" method="get">
+
+
+        <div class="d-grid gap-2 col-auto">
+           <button class="btn btn-primary btn-lg" type="submit" formaction="{{ url_for('train_add') }}">Train</button>
+           <button class="btn btn-primary btn-lg" type="submit" formaction="{{ url_for('station_add') }}">Station</button>
+           <button class="btn btn-primary btn-lg" type="submit" formaction="{{ url_for('schedule_add') }}">Schedule</button>
+        </div>
+    </form>
+{% endblock content %}

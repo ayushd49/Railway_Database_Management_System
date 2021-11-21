@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form action="" method="get">
+          <div class="d-grid gap-2 col-4 mx-auto">
+              <button class="btn btn-primary btn-lg" type="admin" formaction="{{ url_for('admin') }}" >Enter as admin</button>
+              <button class="btn btn-primary btn-lg" type="user" formaction="{{ url_for('user') }}" >Enter as user</button>
+          </div>
+</form>
+{% endblock content %}

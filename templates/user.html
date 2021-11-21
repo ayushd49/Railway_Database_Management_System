@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="form-inline" method='POST'>
+
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">TRAIN ID:</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="TRAIN ID:">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="TRAIN_ID" class="sr-only">TRAIN ID:</label>
+    <input type="text" class="form-control" id="TRAIN_ID" name="TRAIN_ID">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2" formaction="{{ url_for('user') }}" >Show Schedule</button>
+</form>
+<table style="width:100%">
+  <tr>
+    <th>STATION ID</th>
+    <th>ARRIVAL TIME</th>
+    <th>DEPARTURE TIME</th>
+  </tr>
+  {% for i in result %}
+    <tr>
+      {% for j in i %}
+        <td>
+          {{j}}
+        </td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

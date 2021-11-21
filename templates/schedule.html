@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form action="{{url_for('schedule_add')}}", method = "post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <label for="TRAIN_ID">TRAIN_ID</label>
+    <input type="text" id="TRAIN_ID" name="TRAIN_ID">
+    <label for="ARRIVAL_TIME">ARRIVAL_TIME</label>
+    <input type="text" id="ARRIVAL_TIME" name="ARRIVAL_TIME">
+    <label for="DEPARTURE_TIME">DEPARTURE_TIME</label>
+    <input type="text" id="DEPARTURE_TIME" name="DEPARTURE_TIME">
+    <input type="submit" value="Add record">
+</form>
+<form action="{{url_for('schedule_update')}}", method = "post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <label for="TRAIN_ID">TRAIN_ID</label>
+    <input type="text" id="TRAIN_ID" name="TRAIN_ID">
+    <label for="ARRIVAL_TIME">ARRIVAL_TIME</label>
+    <input type="text" id="ARRIVAL_TIME" name="ARRIVAL_TIME">
+    <label for="DEPARTURE_TIME">DEPARTURE_TIME</label>
+    <input type="text" id="DEPARTURE_TIME" name="DEPARTURE_TIME">
+    <input type="submit" value="Update record">
+</form>
+<form action="{{url_for('schedule_delete')}}", method = "post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <label for="TRAIN_ID">TRAIN_ID</label>
+    <input type="text" id="TRAIN_ID" name="TRAIN_ID">
+    <input type="submit" value="Delete record">
+</form>
+<h1>{{result}}</h1>
+{% endblock content %}

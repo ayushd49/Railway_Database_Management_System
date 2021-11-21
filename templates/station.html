@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form action="{{url_for('station_add')}}", method = "post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <label for="TRACK_ID">TRACK_ID</label>
+    <input type="text" id="TRACK_ID" name="TRACK_ID">
+    <input type="submit" value="Add record">
+</form>
+
+<form action="{{url_for('station_update')}}", method="post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <label for="TRACK_ID">TRACK_ID</label>
+    <input type="text" id="TRACK_ID" name="TRACK_ID">
+    <input type="submit" value="Update Record">
+</form>
+<form action="{{url_for('station_delete')}}", method="post">
+    <label for="STATION_ID">STATION_ID</label>
+    <input type="text" id="STATION_ID" name="STATION_ID">
+    <input type="submit" value="Delete record">
+</form>
+<h1>{{result}}</h1>
+{% endblock content %}
